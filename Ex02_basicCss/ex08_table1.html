@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+      table{
+          /* 텍스트 속성은 상속이 된다. */
+          color: gray;
+          /* 배경색 */
+          background-color:  pink;
+        }
+        table,
+        td,
+        th {
+            border: 1px solid blue;
+            
+        }
+
+        td {
+            background-color:  pink;
+            height: 40px;
+            vertical-align: center;
+        }
+        table{
+          background-color: beige;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <table>
+        <!-- table row <tr> 한줄 -->
+        <tr>
+            <!-- table head <th>컬럼이름 : 데이터의 속성값을 의미 -->
+            <th>이름</th>
+            <th>이메일</th>
+        </tr>
+        <tr>
+            <!-- row 안에 : 한줄 안에 , table data <td>-->
+            <td>김철수</td>
+            <td>chul@google.com</td>
+        </tr>
+        <tr>
+            <td>김영희</td>
+            <td>young@google.com</td>
+        </tr>
+    </table>
+</body>
+
+</html>
