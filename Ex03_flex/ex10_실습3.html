@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      height: 100vh;
+      /* display: flex; */
+    }
+    .container{
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    .container div{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .header{
+      width: 100%;
+      background-color: crimson;
+      flex: 1;
+    }
+    .section{
+      display: flex;
+      flex: 8;
+    }
+    .section :nth-child(1){
+      background-color: yellow;
+      flex: 2;
+    }
+    .section :nth-child(2){
+      background-color: lightgray;
+      flex: 6;
+    }
+    .section :nth-child(3){
+      background-color: green;
+      flex: 2;
+    }
+    .footer{
+      width: 100%;
+      background-color: aqua;
+      flex: 1;
+    }
+
+    @media(max-width:768px){
+      .section{
+        flex-direction: column;
+      }
+      .section :nth-child(1){
+        order: 1;
+      }
+      .section :nth-child(2){
+        order: 0;
+      }
+      .section :nth-child(3){
+        order: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">header</div>
+    <div class="section">
+      <div>left</div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, mollitia aliquid. Vel consequatur culpa et iure obcaecati facilis excepturi nesciunt, eos eligendi incidunt laudantium officia nostrum quisquam quos fugit placeat?</div>
+      <div>right</div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+
+</body>
+</html>

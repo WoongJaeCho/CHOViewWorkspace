@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      background-color: #eee;
+    }
+    header{
+      height: 100px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    img{
+      transition: 1s;
+    }
+
+    img:hover{
+      /* transform: scale(1.2); */
+      animation: rotateY 1s infinite;
+    }
+    .gnb a:hover{
+      font-size: x-large;
+    }
+    .gnb a {
+      transition: 1s;
+      margin: 10px;
+    }
+    /* form{} */
+    .gnb a:link{
+      color: black;
+      text-decoration: none;
+    }
+    @keyframes rotateY{
+        0%{
+          transform: scale(1.1);
+        }
+        50%{
+          transform: scale(0.6);
+        }
+        100%{
+          transform: scale(1.1);
+        }
+      }
+    @media(max-width:768px){
+      header{
+        height: 150px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      @keyframes rotateY{
+        0%{
+          transform: rotateY(90deg);
+        }
+        100%{
+          transform: rotateY(-90deg);
+        }
+      }
+      .img:hover{
+        animation: rotateY 1s;
+      }
+      .gnb a {
+      margin: 5px;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="https://www.naver.com" target="_blank">
+        <img src="./images/logo.png" alt="logo" width="200">
+      </a>
+      <div class="gnb">
+        <a href="#" target="_blank"> Home </a>
+        <a href="#" target="_blank"> About us </a>
+        <a href="#" target="_blank"> Service </a>
+        <a href="#" target="_blank"> Contact us </a>
+        <a href="#" target="_blank"> Blog </a>
+      </div>
+      <form>
+        <input type="input" placeholder="Search"  >
+      </form>
+    </header>
+  </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      /* border: 1px solid black; */
+      display: flex;
+    }
+    .parent{
+      border: 5px solid red;
+      flex: 1;
+      display: flex;
+      /* height: 200px; */
+    }
+    .parent div{
+      /* display: flex; */
+      height: 200px;
+      flex: 1;
+    }
+
+    .child:nth-child(1){
+      background-color: yellow;
+    }
+    .child:nth-child(2){
+      background-color: yellowgreen;
+    }
+    @media(max-width:768px){
+      .container{
+        height: 100%;
+        /* width: 100%; */
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="parent">
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+    <div class="parent">
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+    <div class="parent">
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+  </div>
+</body>
+</html>

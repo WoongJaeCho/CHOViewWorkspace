@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* reserCSS */
+    body{
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+    }
+    h1,h2,h3,h4,h5,h6{
+      margin: 0;
+    }
+    .container{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    header{
+      background-color: yellow;
+    }
+    .banner{
+      background-color: yellowgreen;
+    }
+    header,.banner{
+      display: flex;
+      align-items: center;
+    }
+    section{
+      display: flex;
+      flex: 1;
+    }
+    nav{
+      background-color: palevioletred;
+      /* flex: 1; */
+      width: 200px;
+    }
+    main{
+      background-color: aqua;
+      flex: 1;
+    }
+    main,nav,.banner,header{
+      padding: 30px 10px;
+    }
+  </style>
+</head>
+<body>
+ <div class="container">
+  <header>
+    <h2>Header</h2>
+  </header>
+  <div class="banner">
+    <h2>Banner</h2>
+  </div>
+  <section>
+    <nav>
+      <h2>Navi</h2>
+    </nav>
+    <main>
+      <h2>Main</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ab voluptatem error ipsam molestiae dignissimos iusto voluptas incidunt tenetur, obcaecati accusantium inventore dolorum harum odit ducimus corporis aperiam eligendi numquam?</p>
+    </main>
+  </section>
+ </div> 
+</body>
+</html>

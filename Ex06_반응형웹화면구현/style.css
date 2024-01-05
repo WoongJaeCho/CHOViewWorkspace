@@ -1,0 +1,74 @@
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+/* reset CSS */
+a{ text-decoration: none; color: #222;}
+h1,h2,h3,h4,h5,h6{margin: 0;}
+button{cursor: pointer; outline: none;}
+body{
+  margin: 0;
+  height: 100vh;
+  line-height: 1.5em;
+  font-family: 'monserrat', sans-serif;
+}
+section{
+  display: flex;
+  justify-content: space-between;
+}
+.media{
+  display: flex;
+  background-color: lightgray;
+  width: 600px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.media img{
+  width: 100px;
+  flex: 2;
+  /* height: 100px; */
+  margin-right: 10px;
+}
+.media-body{
+  flex: 5;
+}
+.media h3{}
+.media p{
+  font-size: 15px;
+}
+
+/* 모바일 환경 */
+@media screen and (max-width: 767px){
+  section{
+    flex-direction: column;
+  }
+  .media{
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+    padding: 5px;
+  }
+  .media img{
+    flex: 1;
+    width: 100%;
+  }
+}
+
+/* 테블릿 환경 */
+@media (min-width:768px) and (max-width:1024px) {
+  section{
+    flex-direction: column;
+    /* width: 100%; */
+  }
+  .media{
+    width: 100%;
+    /* height: 200px; */
+    margin: 5px;
+    padding: 5px;
+  }
+  .media img{
+    width: 30%;
+  }
+  .media-body{
+    padding: 5px;
+  }
+}

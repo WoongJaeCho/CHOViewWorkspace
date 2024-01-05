@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      margin: 0;
+      height: 100vh;
+    }
+    .container{
+      height: 100%;
+      display: flex;
+      font-size: 2em;
+    }
+    nav{
+      width: 100px;
+      background-color: pink;
+    }
+    main{
+      width: calc(100% - 100px);
+      display: flex;
+      flex-direction: column;
+    }
+    section{
+      display: flex;
+      height: calc(100% - 200px);
+    }
+    header, footer{
+      height: 100px;
+      background-color: palevioletred;
+    }
+    article{
+      flex: 1;
+      background-color: beige;
+    }
+    aside{
+      width: 80px;
+      background-color: lightgray;
+    }
+    /* footer{
+      height: 100px;
+      background-color:  palevioletred;
+    } */
+    nav,header,article,footer,aside{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>Nav</nav>
+    <main>
+      <header>Header</header>
+      <section>
+        <article>Article</article>
+        <aside>Aside</aside>
+      </section>
+      <footer>Footer</footer>
+    </main>
+  </div>
+</body>
+</html>

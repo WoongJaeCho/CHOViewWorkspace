@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: scroll;
+    }
+    .container{
+      /* border: 2px solid; */
+      width: 1200px;
+      display: flex;
+      /* justify-content: center; */
+      align-content: space-between;
+    }
+    section{
+      box-sizing: border-box ;
+      width: 300px;
+      /* height: 600px; */
+      /* flex-basis: 600px; */
+      border: 3px solid pink;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      margin: 20px auto;
+      flex-wrap: wrap;
+    }
+    section img{
+      transition: 10000ms;
+    }
+    section img:hover{
+      transform: scale(100);
+    }
+    /* section h2{}
+    section p{}
+    section img{} */
+    @media(max-width:768px){
+      body{
+        align-items: flex-start;
+      }
+      .container{
+        flex-direction: column;
+        /* align-items: center; */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section>
+      <h2>Card #01</h2>
+      <p>자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면,자장면</p>
+      <img src="./images/자장면.jpg" alt="이미지" height="150">
+    </section>
+    <section>
+      <h2>Card #02</h2>
+      <p>치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨,치킨</p>
+      <img src="./images/치킨.jpg" alt="이미지" height="150">
+    </section>
+    <section>
+      <h2>Card #03</h2>
+      <p>피자,피자,피자,피자,피자,피자,피자,피자,피자,피자,피자,피자,피자</p>
+      <img src="./images/피자.jpg" alt="이미지" height="150">
+    </section>
+  </div>
+</body>
+</html>

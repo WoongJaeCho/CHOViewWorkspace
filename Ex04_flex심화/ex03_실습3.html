@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .parent{
+      border: 2px solid red;
+      width: 600px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .child{
+      background-color: yellowgreen;
+      margin: 15px;
+      height: 150px;
+      text-align: center;
+      line-height: 150px;
+      /* 부모 100%에서 2칸씩만 자식 요소 출력
+      마진은 외부 여백이라 그만큼 빼야한다.
+      마진이 15px이면 양쪽 15px*2 해서 30px 뺴야한다. */
+      width: calc(100% / 2 - 30px);
+      /* flex: 1 0 33%; */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child">
+      <div>Content</div>
+    </div>
+    <div class="child">
+      <div>Content</div>
+    </div>
+    <div class="child">
+      <div>Content</div>
+    </div>
+    <div class="child">
+      <div>Content</div>
+    </div>
+    <div class="child">
+      <div>Content</div>
+    </div>
+    <div class="child">
+      <div>Content</div>
+    </div>
+
+  </div>
+</body>
+</html>

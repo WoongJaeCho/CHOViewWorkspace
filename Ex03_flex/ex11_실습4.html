@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0 ;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    section{
+      /* 보통 컨텐츠 영역은 width - 1200px~1300px */
+      width: 1200px;
+      display: flex;
+    }
+    .content1{
+      background-color: yellow;
+      padding: 10px;
+      flex: 1;
+      /* overflow: scroll; */
+    }
+    .content2{
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .sub1{
+      background-color: aqua;
+      padding: 10px;
+      flex: 1;
+    }
+    .sub2{
+      background-color: palevioletred;
+      padding: 10px;
+      flex: 1;
+    }
+    @media(max-width:768px){
+      body{
+        align-items: flex-start;
+      }
+      section{
+        width: 100%;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <article class="content1">
+      <h2>content1</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cum maiores earum distinctio in perferendis? Quaerat, esse maxime assumenda architecto blanditiis asperiores veniam consequuntur amet est ratione, odit voluptate velit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cum maiores earum distinctio in perferendis? Quaerat, esse maxime assumenda architecto blanditiis asperiores veniam consequuntur amet est ratione, odit voluptate velit. Fugit cum maiores earum distinctio in perferendis? Quaerat, esse maxime assumenda architecto blanditiis asperiores veniam consequuntur amet est ratione, odit voluptate velit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cum maiores earum distinctio in perferendis? Quaerat, esse maxime assumenda architecto blanditiis asperiores veniam consequuntur amet est ratione, odit voluptate velit.</p>
+    </article>
+    <article class="content2">
+      <div class="sub1">
+        <h2>sub1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex facilis eius vel. Incidunt pariatur porro, cumque ab esse harum dolore ipsum quibusdam, excepturi illum quam ex magni tempora totam molestiae?</p>
+      </div>
+      <div class="sub2">
+        <h2>sub2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, quo vitae voluptatibus similique libero incidunt sit itaque quis sequi asperiores laborum officia? Iure reprehenderit harum ducimus corrupti exercitationem corporis officia?</p>
+      </div>
+    </article>
+  </section>
+</body>
+</html>
