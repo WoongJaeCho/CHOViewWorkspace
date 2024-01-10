@@ -1,0 +1,431 @@
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:300,400,500,700,700&display=swap');
+/* reset CSS */
+html{
+  scroll-behavior: smooth;
+}
+a{ text-decoration: none; color: #222;}
+h1,h2,h3,h4,h5,h6{margin: 0; font-weight: normal;}
+button{cursor: pointer; outline: none; border: none;}
+input,textarea,select{
+  outline: none;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+ul{margin: 0; padding: 0;list-style: none;}
+body{
+  margin: 0;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Noto Sans KR', sans-serif; */
+  line-height: 1.5em;
+}
+.container{
+  height: 100%;
+}
+/* common CSS */
+.inner{
+  /* border: 1px solid blue; */
+  width: 1300px;
+  margin: auto;
+}
+/* header */
+header{
+  /* border: 1px solid black; */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  visibility: visible;
+  transform: translateY(0);
+  transition: 300ms;
+}
+.banner{
+  /* border: 1px solid blue; */
+  background-color: black;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+header.active .banner{
+  visibility: hidden;
+  transform: translateY(-40px);
+}
+.lnb{
+  width: 1300px;
+  /* border: 1px solid pink; */
+  margin: auto;
+  text-align: right;
+}
+.lnb a{
+  color: #ddd;
+  padding-left: 15px;
+}
+.lnb a em{
+  color: #bbb;
+}
+nav{
+  width: 1300px;
+  /* border: 1px solid red; */
+  /* background-color: lightgray; */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+header.active{
+  transform: translateY(-45px);
+  width: 100%;
+  background-color: #fff;
+}
+header.active .gnb li a{
+  color: #000;
+}
+/* .logo{} */
+/* .logo img{} */
+.gnb{
+  display: flex;
+  align-items: center;
+}
+/* .gnb li{} */
+.gnb li a{
+  color: #fff;
+  margin-left: 15px;
+}
+.gnb li a:hover{
+  color: #222;
+}
+/* intro */
+.intro{
+  /* border: 1px solid red; */
+  height: 70vh;
+  background: url(./images/intro.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  line-height: 1;
+}
+.heading{
+  color: #fff;
+  text-align: center;
+}
+.heading h1{
+  font-size: 56px;
+  margin-bottom: 30px;
+}
+.heading p{
+  font-size: 22px;
+  line-height: 1.5em;
+  padding: 0 150px;
+}
+/* about */
+.about-content{
+  /* height: 70vh; */
+  display: flex;
+  padding: 150px 0 ;
+}
+.about-content > div{
+  padding: 30px;
+}
+.desc{
+  text-align: center;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.desc h2{
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.desc p{
+  font-size: 16px;
+  line-height: 1.7em;
+}
+.desc a{
+  color:  orange;
+  font-weight: bold;
+}
+.desc a:hover{
+  text-decoration: underline;
+}
+.photo{
+  flex: 2;
+  margin: auto 20px;
+  
+  overflow: hidden;
+}
+.photo img{
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  width: 100%;
+}
+/* ranking */
+.ranking{
+  /* 연한 배경색 #f1~f9 */
+  background-color: #f9f9f9;
+}
+.ranking-content{
+  /* border: 1px solid pink; */
+  padding: 100px 0;
+}
+.ranking-content h2{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.items{
+  display: flex;
+  justify-content: space-between;
+}
+.item{
+  width: 390px;
+  height: 620px;
+  /* border: 2px solid red; */
+  border-radius: 30px 0 30px 0;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px #00000065;
+}
+.up-image{
+  width: 100%;
+  height: 300px;
+}
+.up-image img{
+  /* 이미지 자체에는 사이즈 픽스를 안시킴
+  부모에 따라 유동적으로 바꿀 수 있게 해준다 */
+  /* 100% 사용하려면 부모의 height값이 있어야 한다 */
+  height: 100%;
+}
+.down-desc{
+  padding: 25px;
+}
+.down-desc h3{
+  font-size: 22px;
+  margin-top: 5px;
+}
+.down-desc p{
+  font-size: 16px;
+}
+.down-desc .badge{
+  background-color: pink;
+  color: #fff;
+  padding: 2px 10px;
+  font-size: 16px;
+}
+.down-desc .badge.must{
+  background-color: royalblue;
+}
+.down-desc .badge.good{
+  background-color: crimson;
+}
+.down-desc a{}
+.btn-explore{
+  color: #c25a3a;
+  font-weight: 500;
+}
+.btn-explore img{
+  transition: 100ms;
+}
+.btn-explore:hover img{
+  /* transform: translateX(10px); */
+  margin-left: 10px;
+}
+/* testimonial */
+.testimonial{
+  padding: 100px 0;
+}
+.testimonial-content{
+  text-align: center;
+}
+.testimonial-content h2{
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.testimonial-content h2 b{}
+.testimonial-content hr{
+  border: none;
+  background-color: royalblue;
+  width: 120px;
+  height: 4px;
+  margin: 30px auto;
+}
+.myslider{
+  /* border: 1px solid red; */
+}
+.myslider div{
+  /* border: 1px solid green; */
+  height: 300px;
+}
+.client{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client img{
+  width: 85px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.client span{
+  font-size: 18px;
+  line-height: 1.7em;
+}
+.client span b{
+  display: block;
+  
+}
+.comment{
+  font-size: 16px;
+  line-height: 1.6em;
+  padding: 20px;
+}
+/* callaction */
+.callaction{
+  background: url(./images/callaction-01.jpg) no-repeat center center;
+  background-size: cover;
+  /* margin: auto; */
+  height: 450px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+/* 가상 선택자를 사용할 때 1.content:'', before 인라인요소 포지션을 주면 인라인블럭으로 */
+.callaction::before{
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(152, 251, 152, 0.4);
+  background: linear-gradient(to right bottom rgba(128, 0, 128, 0.4) rgba(255, 255, 0, 0.4));
+}
+.callaction-heading{
+  /* height: 100%; */
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.callaction-heading h2{
+  font-size: 4em;
+  line-height: 1.3em;
+  font-weight: 300;
+  letter-spacing: -1px;
+  margin-bottom: 50px;
+}
+.callaction-heading h2 span{
+  font-weight: 500;
+}
+/* a 인라인 요소 */
+.callaction-heading a{
+  /* display: inline-block; */
+  background-color: green;
+  color: #ddd;
+  border-radius: 3px;
+  padding: 10px 30px;
+  font-size: 1.2em;
+}
+/* festival */
+.fastival{
+  background-color: #333;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fastival-heading{
+  /* border: 1px solid red; */
+  width: 100%;
+  text-align: center;
+}
+.fastival-heading h3{
+  color: #fff;
+  font-weight: 200;
+  font-size: 1.5em;
+}
+.fastival-heading h3 span{
+  font-weight: 500;
+}
+.fastival .buttons{
+  margin-top: 30px;
+}
+.buttons a{
+  border-radius: 5px;
+  padding: 5px 30px;
+  margin: 10px;
+}
+.buttons a:nth-child(1){
+  background-color: yellow;
+}
+.buttons a:nth-child(2){
+  background-color: #fff;
+  color: #222;
+}
+
+/* footer */
+footer{
+  background-color: #000;
+  padding: 30px;
+}
+.footer-content{
+  display: flex;
+  
+}
+.footer-content ul{
+  /* border: 2px solid red; */
+  text-align: center;
+  color: #959595;
+}
+.footer-content ul li:first-child{
+  color: #d9d9d9;
+  font-weight: 500;
+}
+.help li:last-child{
+
+}
+/* .footer-content ul li{} */
+.footer-content ul li a{
+  color: #959595;
+}
+.footer-content ul li a:hover{
+  text-decoration: underline;
+}
+.community{
+  flex: 1;
+}
+.network{
+  flex: 1;
+}
+.help{
+  flex: 2;
+}
+/* up */
+.btn-top{
+  background-color: skyblue;
+  display: block;
+  /* height: 50px;
+  width: 50px; */
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 2em;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  visibility: hidden;
+  transform: translateY(100px);
+  transition: 300ms;
+}
+
+.btn-top.active{
+  visibility: visible;
+  transform: translateY(0);
+}
+

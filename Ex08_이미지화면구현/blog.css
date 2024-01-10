@@ -1,0 +1,133 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:300,400,500,700,700&display=swap');
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* reset CSS */
+a{ text-decoration: none; color: #222;}
+h1,h2,h3,h4,h5,h6{ margin: 0; font-weight: normal;}
+button{ cursor: pointer; outline: none; border: none;}
+input,textarea,select{
+  outline: none;
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+  font-family: 'Montserrat' , sans-serif;
+  /* font-family: 'Noto Sans KR' , sans-serif; */
+}
+
+section{
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  border: 1px solid black;
+}
+.post{
+  display: flex;
+}
+.post:nth-child(odd){
+  flex-direction: column;
+}
+.post:nth-child(even){
+  flex-direction: column-reverse;
+}
+.image{
+  overflow: hidden;
+  width: 250px;
+}
+/* img 인라인 블럭 -> 자체적으로 마진 이 있다 */
+.image img{
+  background-color: beige;
+  width: 100%;
+  display: block;
+  transition: 500ms;
+  /* margin-bottom: 10px; */
+}
+.image img:hover{
+  /* transform: scale(1.1); */
+  animation: bouns 1000ms ease-in-out infinite;
+}
+.desc{
+  overflow: hidden;
+  background-color: lightseagreen;
+  color: #fff;
+  height: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.desc:hover{
+  animation: rotate 1000ms ease-in-out infinite;
+}
+.desc h2{
+  padding-top: 20px;
+}
+.desc p{
+  padding: 20px;
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes bouns{
+  0%{
+    transform: scale(1.05);
+  }
+  50%{
+    transform: scale(0.95);
+  }
+  100%{
+    transform: scale(1.05);
+  }
+}
+/* 테블릿 */
+@media (min-width:768px) and (max-width:1024px) {
+  section{
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .post:nth-child(odd){
+    flex-direction: row;
+  }
+  .post:nth-child(even){
+    flex-direction: row-reverse;
+  }
+  .image, .desc{
+    flex: 1;
+    height: auto;
+  }
+}
+
+/* 모바일 */
+@media screen and (max-width:767px) {
+  section{
+    flex-direction: column;
+    width: 100%;
+  }
+  /* .post{
+    flex-direction: column !important;
+  } */
+  .post:nth-child(odd){
+    flex-direction: column;
+  }
+  .post:nth-child(even){
+    flex-direction: column;
+  }
+  .image{
+    width: 100%;
+    flex: 2;
+  }
+  .desc{
+    flex: 1;
+  }
+}

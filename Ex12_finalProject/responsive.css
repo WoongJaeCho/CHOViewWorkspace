@@ -1,0 +1,10 @@
+@media (max-width : 768px) {
+  /* width 고정 => 100% */
+  /* row => column */
+  .banner{
+    visibility: hidden;
+  }
+  nav{
+    transform: translateY(-45px);
+  }
+}
